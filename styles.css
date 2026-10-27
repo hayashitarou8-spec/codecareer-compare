@@ -106,11 +106,72 @@ th, td {
   padding: .55rem .65rem;
   text-align: left;
   vertical-align: top;
+  line-break: strict;
+  hyphens: none;
 }
 th {
   background: #e8ecf8;
   color: var(--brand-dark);
   white-space: nowrap;
+}
+/* Column labels for narrow-screen cards. Must match each article's thead. */
+.cmp-daini { --col-1: "ハタラクティブ"; --col-2: "マイナビジョブ20's"; }
+.cmp-infra { --col-1: "レバテックキャリア"; --col-2: "Geekly"; --col-3: "type転職エージェントIT"; }
+.cmp-pillar { --col-1: "レバテックキャリア"; --col-2: "Geekly（ギークリー）"; --col-3: "マイナビ転職 IT AGENT"; }
+.cmp-lev-geek { --col-1: "レバテックキャリア"; --col-2: "Geekly（ギークリー）"; }
+.cmp-mishiren { --col-1: "ユニゾンキャリア"; --col-2: "ウズカレエージェント"; --col-3: "ワークポート"; }
+.cmp-mynavi-lev { --col-1: "マイナビ転職 IT AGENT"; --col-2: "レバテックキャリア"; }
+.cmp-ses { --col-1: "レバテックキャリア"; --col-2: "Geekly"; --col-3: "マイナビ転職 IT AGENT"; }
+@media (max-width: 640px) {
+  .table-wrap { overflow-x: visible; }
+  .table-wrap table {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-size: .9rem;
+  }
+  .table-wrap thead { display: none; }
+  .table-wrap tbody,
+  .table-wrap tr,
+  .table-wrap th,
+  .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+  .table-wrap tr {
+    margin: 0 0 .85rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(30, 42, 102, .04);
+  }
+  .table-wrap th,
+  .table-wrap td {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+    padding: .65rem .85rem;
+    /* Full-width cards can keep compounds like キャンセル intact. */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .table-wrap tr > :last-child { border-bottom: none; }
+  .table-wrap tr > th {
+    background: #e8ecf8;
+    font-weight: 700;
+  }
+  .table-wrap tbody td:nth-of-type(1)::before { content: var(--col-1, none); }
+  .table-wrap tbody td:nth-of-type(2)::before { content: var(--col-2, none); }
+  .table-wrap tbody td:nth-of-type(3)::before { content: var(--col-3, none); }
+  .table-wrap tbody td::before {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--brand);
+    margin-bottom: .15rem;
+  }
 }
 .cta-box {
   background: linear-gradient(135deg, #eef3ff, #f8faff);
