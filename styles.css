@@ -1,0 +1,163 @@
+/* CodeCareer Compare — indigo tech palette (distinct from kurashi green / clinic) */
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #1a1f36;
+  --muted: #5b647a;
+  --border: #d8dee9;
+  --brand: #2f3f8f;
+  --brand-dark: #1e2a66;
+  --accent: #3d8bfd;
+  --note-bg: #eef3ff;
+  --cta: #2f3f8f;
+  --cta-hover: #1e2a66;
+  --ok: #0f766e;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.8;
+  background: var(--bg);
+}
+a { color: var(--brand); }
+a:hover { color: var(--accent); }
+header {
+  background: linear-gradient(120deg, var(--brand-dark), var(--brand));
+  color: #fff;
+  padding: 1rem 1.25rem;
+}
+header a { color: #fff; text-decoration: none; }
+header .brand-sub {
+  display: block;
+  font-size: .8rem;
+  opacity: .85;
+  font-weight: 400;
+}
+nav {
+  margin-top: .5rem;
+  font-size: .9rem;
+}
+nav a { margin-right: 1rem; opacity: .95; }
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+h1 { font-size: 1.55rem; line-height: 1.4; margin-top: 0; }
+h2 {
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: .35rem;
+  margin-top: 2rem;
+}
+h3 { font-size: 1.05rem; margin-top: 1.5rem; }
+.note {
+  font-size: .9rem;
+  color: var(--muted);
+  background: var(--note-bg);
+  border-left: 4px solid var(--brand);
+  padding: .75rem 1rem;
+  margin: 1rem 0;
+}
+.pr-badge {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  background: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffe08a;
+  border-radius: 4px;
+  padding: .15rem .5rem;
+  margin-right: .4rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 1px 2px rgba(30, 42, 102, .04);
+}
+.card h3 { margin-top: 0; }
+.conclusion {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+.conclusion ol { margin: .5rem 0 0; padding-left: 1.25rem; }
+.conclusion li { margin: .4rem 0; }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: .92rem;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: .55rem .65rem;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #e8ecf8;
+  color: var(--brand-dark);
+  white-space: nowrap;
+}
+.cta-box {
+  background: linear-gradient(135deg, #eef3ff, #f8faff);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+.cta-box .btn {
+  display: inline-block;
+  background: var(--cta);
+  color: #fff !important;
+  text-decoration: none;
+  padding: .55rem 1rem;
+  border-radius: 6px;
+  margin: .35rem .35rem .35rem 0;
+  font-weight: 600;
+}
+.cta-box .btn:hover { background: var(--cta-hover); }
+.meta {
+  font-size: .85rem;
+  color: var(--muted);
+}
+ul.checklist { padding-left: 1.2rem; }
+footer {
+  background: var(--brand-dark);
+  color: #d7ddf0;
+  padding: 1.25rem;
+  font-size: .85rem;
+  text-align: center;
+}
+footer a { color: #fff; }
+.article-list { list-style: none; padding: 0; }
+.article-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: .75rem;
+}
+.article-list a { font-weight: 700; text-decoration: none; }
+.tag {
+  display: inline-block;
+  font-size: .72rem;
+  background: #e8ecf8;
+  color: var(--brand-dark);
+  border-radius: 999px;
+  padding: .1rem .55rem;
+  margin-right: .25rem;
+}
